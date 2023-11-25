@@ -1,12 +1,12 @@
 const hre = require("hardhat");
 
 async function main() {
-  const Greeter = await hre.ethers.getContractFactory("Greeter");
-  const greeter = await Greeter.deploy("Hello, Hardhat!");
+  const TodoList = await hre.ethers.getContractFactory("TodoList");
+  const todolist = await TodoList.deploy("My Todos");
 
-  await greeter.deployed();
+  await todolist.deployed();
 
-  console.log("Greeter deployed to:", greeter.address);
+  console.log("todolist deployed to:", todolist.address);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
